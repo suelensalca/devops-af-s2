@@ -6,8 +6,8 @@ export default function Home() {
     <Grid size={4} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '32px', height: '100%' }}>
       <Box sx={{backgroundColor: 'seashell', borderRadius: '24px', padding: '32px', height: '70%'}}>
         <Typography sx={{fontSize: '21px', fontWeight: '500', mb: '32px'}}>
-          Crie e agende conteúdo de forma <span style={{color: '#3D348B'}}>
-          rápida</span>.
+          Crie e agende conteúdo de forma 
+          <span style={{color: '#3D348B'}}>rápida</span>.
           </Typography>
         <Button sx={{backgroundColor: '#f7b801', padding: '8px 20px', borderRadius: '40px', color: '#3D348B'}}>crie um Post</Button>
       </Box>
@@ -26,7 +26,7 @@ export default function Home() {
         Gerencia diferentes contas e plataformas
       </Box>
       <Box sx={{backgroundColor: '#3D348B', borderRadius: '24px', padding: '32px', fontSize: '24px', height: '30%', color: 'white' }}>
-        aumente seu crescimento em 54%
+        Aumente seu crescimento em 54%
       </Box>
     </Grid>
     <Grid size={4} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '32px' }}>
