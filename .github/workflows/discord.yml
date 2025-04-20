@@ -7,10 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run Discord Webhook
-        uses: Sniddl/discord-commits@v1.6
+      - name: Send Discord Message
+        uses: sarge841/action-discord-webhook@v1
         with:
-          # webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          webhook: "https://discord.com/api/webhooks/1363277317090312352/zcIgaKT5IvTswcU8aMEbx6U96GQ_nSh2I0F-WtgHYJfcTBu_qtX7WltF2seN_NtT9cW7"
-          template: "avatar-with-link"
-          include-extras: true
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
+          content: 'A new commit by ${{ github.actor }}!'
