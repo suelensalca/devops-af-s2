@@ -12,6 +12,6 @@ jobs:
         with:
           webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
           embed_title: 'Successful commit: ${{ github.event.head_commit.id }}'
-          embed_description: 'description: ${{ github.event.head_commit.message }} / ${{ github.event.head_commit.author.username }} / ${{ github.actor_id }}'
+          embed_description: '**Description:** ${{ github.event.head_commit.message }} / ${{ github.actor }}'
           embed_author_name: '${{ github.event.head_commit.author.name }}'
-          embed_author_icon_url: 'https://avatars.githubusercontent.com/${{ github.actor_id }}'
+          embed_author_icon_url: 'https://avatars.githubusercontent.com/${{ github.actor }}'
