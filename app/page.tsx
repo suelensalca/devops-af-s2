@@ -1,6 +1,10 @@
-import { Box, Button, Grid, Rating, Typography } from "@mui/material";
+"use client"
+import { Box, Button, Grid, Rating, TextField, Typography } from "@mui/material";
+import { useState } from "react";
 
 export default function Home() {
+  const [email, setEmail] = useState('');
+
   return (
    <Grid container sx={{backgroundColor: '#F1F1FA', height: '700px', padding: '40px'}} spacing={2}>
     <Grid size={4} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '32px', height: '100%' }}>
@@ -35,8 +39,10 @@ export default function Home() {
           Mantenha um calendário de postagens constante.
           </Typography>
       </Box>
-      <Box sx={{backgroundColor: 'seashell', borderRadius: '24px', padding: '32px', fontSize: '24px', height: '60%' }}>
-        Cresça seus seguidores com conteúdos ininterruptos.
+      <Box sx={{display: 'flex', flexDirection: 'column', gap: '20px', backgroundColor: 'seashell', borderRadius: '24px', padding: '32px', fontSize: '24px', height: '60%' }}>
+        Cresça seus seguidores com conteúdos ininterruptos. Cadastre seu email e saiba mais:
+        <TextField placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <Button sx={{backgroundColor: '#f7b801', padding: '8px 20px', borderRadius: '40px', color: '#3D348B'}}>cadastrar</Button>
       </Box>
     </Grid>
    </Grid>
