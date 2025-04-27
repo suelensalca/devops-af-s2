@@ -1,6 +1,5 @@
 name: Discord
 on:
-  - workflow_dispatch
   - push
 
 jobs:
@@ -8,9 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run Discord Webhook
-        uses: Sniddl/discord-commits@v1.6
+      - name: Send Discord Message
+        uses: sarge841/action-discord-webhook@v1
         with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          template: "avatar-with-link"
-          include-extras: true
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
+          embed_title: 'Successful commit: ${{ github.event.head_commit.id }}'
+          embed_description: '**Description:** ${{ github.event.head_commit.message }}'
+          embed_author_name: '${{ github.event.head_commit.author.name }}'
+          embed_author_icon_url: 'https://avatars.githubusercontent.com/${{ github.actor }}'
