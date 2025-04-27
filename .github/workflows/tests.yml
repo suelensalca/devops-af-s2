@@ -11,4 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Run Jest
-      uses: stefanoeb/jest-action@1.0.3
+      run: npm
+    - name: Run Tests
+      run: npm run test
+      
