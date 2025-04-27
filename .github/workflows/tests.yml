@@ -10,8 +10,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Run Jest
-      run: npm
     - name: Run Tests
       run: npm run test
       
